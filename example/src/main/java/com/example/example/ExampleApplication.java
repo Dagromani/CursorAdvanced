@@ -1,7 +1,6 @@
 package com.example.example;
 
 import com.example.example.Entity.User;
-import com.example.example.Repository.UserRepository;
 import com.example.example.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -16,6 +15,9 @@ public class ExampleApplication implements CommandLineRunner {
 //		@Autowired
 //		UserRepository userRepository;
 
+		@Autowired
+		UserService userService;
+
 	public static void main(String[] args) {
 		UserService userService = new UserService();
 		SpringApplication.run(ExampleApplication.class, args);
@@ -27,7 +29,6 @@ public class ExampleApplication implements CommandLineRunner {
 //		User user = new User("Lesha");
 //		userRepository.save(user);
 
-
-
+		userService.addUser();
 	}
 }
