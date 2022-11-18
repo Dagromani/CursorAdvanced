@@ -16,7 +16,6 @@ public class UniversityGroupController {
 
     private final UniversityGroupService universityGroupService;
 
-
     public UniversityGroupController(UniversityGroupService universityGroupService) {
         this.universityGroupService = universityGroupService;
     }
