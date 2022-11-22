@@ -24,7 +24,7 @@ public class ShopService {
         return shopsDB.getShopsDB();
     }
 
-    public Shop getShopWithID(Long id) throws ShopNotFoundException {
+    public Shop getShopWithID(Long id) {
         Shop shop = shopsDB.getShopsDB().get(id);
         if (shop == null) {
             throw new ShopNotFoundException("Shop not found");
